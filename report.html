@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Report / 學習報告</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .report-chart {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #e3e8ee;
+      border-radius: 10px;
+    }
+    .report-chart-box {
+      width: 100%;
+      height: 460px;
+    }
+    .report-chart figcaption {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <h1 class="site-title" data-lang="en">Learning Report</h1>
+        <h1 class="site-title" data-lang="zh-Hant" hidden>學習報告</h1>
+        <p class="site-subtitle" data-lang="en">Origin, method, analysis and reflection</p>
+        <p class="site-subtitle" data-lang="zh-Hant" hidden>緣起、方法、分析與反思</p>
+      </div>
+      <div class="header-actions">
+        <button id="lang-toggle" class="lang-toggle" type="button">繁體中文</button>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html" class="nav-link" data-i18n="nav.explorer">Explorer</a>
+      <a href="report.html" class="nav-link active" data-i18n="nav.report">Report</a>
+      <a href="codebook.html" class="nav-link" data-i18n="nav.codebook">Codebook</a>
+      <a href="ai-declaration.html" class="nav-link" data-i18n="nav.ai">AI Use Declaration</a>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <section>
+      <h2 data-lang="en">1. Origin</h2>
+      <h2 data-lang="zh-Hant" hidden>1. 緣起</h2>
+      <p data-lang="en">
+        I had my first legal translation course when I was in college, which was an elective,
+        and I chose it because I found the professor who gave the lecture was professional and I
+        wanted to have more of his lessons. That is where everything went wrong. This field is
+        way more commanding than I thought, or than I could accept. I tried hard but nearly
+        failed, and I filled in the wrong bubbles on my answer sheet. What an experience! When
+        I saw the schedule of MA in CUHK, the course “Introduction to Legal Translation” caught
+        my eye. “I am so going to make it this time!” I thought, with great determination, and
+        selected the course.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        我在大學時第一次修讀法律翻譯課程，那是一門選修科，我選它是因為覺得授課的教授很專業，想多上他的課。
+        一切就是從那裏開始出錯的。這個領域遠比我以為的、或我所能接受的更難駕馭。我盡了力，卻幾乎不及格，
+        還在答題紙上填錯了答案欄。多麼難忘的經歷！後來我看到中大碩士課程的時間表，一門「法律翻譯導論」吸引了
+        我的目光。我下定決心想着：「這次我一定要成功！」於是選了這門課。
+      </p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">2. Background</h2>
+      <h2 data-lang="zh-Hant" hidden>2. 背景</h2>
+      <p data-lang="en">
+        After the very first assignment, I instantly realized: I was not going to make it. The
+        grammar was fine, though the majority of sentences were quite long and hard to read.
+        What troubled me most were the words (or maybe the jargon), and some special uses of
+        common words in a legal context are extremely tricky. Not only do you need to realize
+        that such special uses exist, but you also need to identify whether a word in a given
+        context is used in its legal meaning or another.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        完成第一份功課後，我立刻意識到：這次我做不到。文法沒有問題，只是大部分句子都很長、很難讀。
+        最困擾我的是詞語（或者說是行內術語），而一些常用詞在法律語境中的特殊用法特別棘手。
+        你不單要意識到這些特殊用法存在，還要判斷某個詞在特定語境中用的是法律義還是另一種意思。
+      </p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">3. Gap</h2>
+      <h2 data-lang="zh-Hant" hidden>3. 缺口</h2>
+      <p data-lang="en">
+        However, the glossary lists terms and renderings row by row, but it does not show at a
+        glance how many different Chinese renderings each English term has. I could not find a
+        ready-made summary of how common one-term-many-renderings is in official Hong Kong legal
+        terminology.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        然而，詞彙表逐行列出術語和譯名，卻不能讓人一眼看出每個英文術語有多少種不同的中文譯名。
+        我找不到現成的摘要，說明「一詞多譯」在香港官方法律術語中有多普遍。
+      </p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">4. Questions</h2>
+      <h2 data-lang="zh-Hant" hidden>4. 研究問題</h2>
+      <p data-lang="en">
+        That is why I started this corpus. At the very start, I thought the entries would be easy
+        to get and read. They were not. I found some of them have multiple meanings, which raised
+        my interest: How often does one English legal term have more than one official Chinese
+        rendering? Which terms branch into the most renderings, and does rendering multiplicity
+        fall into a small number of clear tiers?
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        這正是我建立這個語料庫的原因。起初，我以為這些條目很容易取得和閱讀，但事實並非如此。
+        我發現其中一些有多種意思，這引起了我的興趣：一個英文法律術語有多少機會擁有多於一個官方中文譯名？
+        哪些術語分支出最多的譯名？譯名多樣性又是否會落入少數幾個清晰的層級？
+      </p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">5. Method</h2>
+      <h2 data-lang="zh-Hant" hidden>5. 方法</h2>
+      <p data-lang="en">
+        Having downloaded the glossary from DOJ, I used the official XML from the Department of
+        Justice, fixed its unescaped &amp; characters, removed exact-duplicate rows (73,443 →
+        72,452; 991 duplicates removed), and drew 550 entries with random seed 2026, keeping only
+        rows with non-empty English and Chinese. Each English term was classified by the number of
+        distinct Chinese renderings it has across the full glossary: 1 → one-to-one, 2–3 →
+        one-to-many, 4+ → polysemous. Trailing ※比較 cross-reference notes are stripped before
+        counting (codebook v1.1). I piloted the codebook on 30 entries, revised it, then applied
+        it to all 550. I manually checked 50 randomly sampled entries (seed 202602) against the
+        source and found 0 errors. In brief, the codebook was revised twice: the first draft used
+        four translation-strategy labels, but the 30-entry pilot showed that the literal /
+        functional-equivalent boundary was too blurred to apply consistently, so I replaced it
+        with the reproducible count of distinct Chinese renderings used here; the final v1.1 fix
+        strips trailing cross-reference notes before counting. The full codebook change log is on
+        the Codebook page.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        從律政司下載詞彙表後，我使用律政司的官方 XML，修正了未轉義的 &amp; 字符，刪除了完全重複的行
+        （73,443 → 72,452；移除 991 條重複），並以隨機種子 2026 抽取 550 條，只保留英文和中文均非空的記錄。
+        每個英文術語按其於整份詞彙表中擁有的不同中文譯名數目分類：1 → 單一譯法，2–3 → 多譯，4+ → 高度多譯。
+        計算前會先移除結尾的「※比較」互相參照註記（編碼手冊 v1.1）。我先在 30 條上試行編碼手冊，修訂後再套用於
+        全部 550 條。我隨機抽樣人工核對了 50 條（種子 202602），與來源比對後發現 0 個錯誤。簡言之，編碼手冊修訂了
+        兩次：初稿使用四種翻譯策略標籤，但 30 條試行顯示「直譯／功能對等」的界線太模糊、難以一致地套用，
+        因此我改為現時使用的、可重現的「不同中文譯名數目」計數；最後的 v1.1 修訂則在計算前移除結尾的互相參照註記。
+        完整的編碼手冊修訂紀錄見「編碼手冊」頁。
+      </p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">6. Analysis</h2>
+      <h2 data-lang="zh-Hant" hidden>6. 分析</h2>
+      <p data-lang="en">
+        The 550 entries split into 367 one-to-one (66.7%), 141 one-to-many with 2–3 renderings
+        (25.6%), and 42 polysemous with 4+ renderings (7.6%). Most Hong Kong legal terms have one
+        stable rendering, but about one in three has two or more, and a small group is highly
+        variable (<em>information</em>, for example, has 6). The network graph shows which English
+        terms branch into the most Chinese renderings; the Sankey diagram shows how one chosen
+        term flows into its renderings; and the word cloud shows which key terms are most multiply
+        rendered. The codebook v1.1 fix (<em>action</em> and <em>statute</em> dropped from 4 to 3
+        renderings after their cross-reference notes were merged) is a concrete reminder that
+        chart numbers must be checked against the table.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        550 條條目分為 367 條單一譯法（66.7%）、141 條有 2–3 種譯名的多譯（25.6%）、42 條有 4 種或以上譯名的
+        高度多譯（7.6%）。大部分香港法律術語都有穩定的單一譯法，但約三分之一有兩個或以上的譯名，另有一小群變化
+        極大（例如 <em>information</em> 有 6 種）。網絡圖顯示哪些英文術語分支出最多的中文譯名；桑基圖顯示所選的
+        一個術語如何流向其譯名；詞雲顯示哪些關鍵詞最多譯名。編碼手冊 v1.1 的修正（<em>action</em> 和
+        <em>statute</em> 在合併其互相參照註記後，由 4 種譯名減至 3 種）具體提醒我們：圖表數字必須與表格核對。
+      </p>
+
+      <figure class="report-chart">
+        <div id="report-network" class="report-chart-box"></div>
+        <figcaption data-lang="en">Network graph — Which English terms branch into the most Chinese renderings?</figcaption>
+        <figcaption data-lang="zh-Hant" hidden>網絡圖——哪些英文術語分支出最多的中文譯名？</figcaption>
+      </figure>
+
+      <figure class="report-chart">
+        <div id="report-sankey" class="report-chart-box"></div>
+        <figcaption data-lang="en">Sankey diagram — How does <em>information</em> flow into its Chinese renderings?</figcaption>
+        <figcaption data-lang="zh-Hant" hidden>桑基圖——<em>information</em> 如何流向其中文譯名？</figcaption>
+      </figure>
+
+      <figure class="report-chart">
+        <div id="report-wordcloud" class="report-chart-box"></div>
+        <figcaption data-lang="en">Word cloud — Which words have the most Chinese renderings?</figcaption>
+        <figcaption data-lang="zh-Hant" hidden>詞雲——哪些詞的中文譯名最多？</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2 data-lang="en">7. Conclusion</h2>
+      <h2 data-lang="zh-Hant" hidden>7. 結論</h2>
+      <p data-lang="en">
+        What I achieved: a reproducible 550-entry corpus drawn from the DOJ glossary; a codebook
+        that classifies each English legal term by its number of official Chinese renderings; and
+        an interactive site that lets visitors search, filter, and explore the 367 / 141 / 42
+        split through a network graph, a Sankey diagram, and a word cloud. The main finding is
+        that most Hong Kong legal terms are stable, but roughly one in three has two or more
+        renderings, with a small, highly variable group such as <em>information</em>. In a word,
+        AI now has developed into a field that one can never imagine without using it (paid
+        versions). However, AI still serves as an “intelligent answer machine”, waiting for good
+        prompts to trigger its real skills. Otherwise, it is as imbecile as a traditional
+        calculating machine, and could occasionally fail to solve one plus one. Humans in this era
+        serve as developers, or commanders. AI is, at least currently, not here to take over the
+        jobs, but to assist us. So, no need to dread — take the lead.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        我所做到的：一個取自律政司詞彙表、可重現的 550 條語料庫；一套按每個英文法律術語的官方中文譯名數目來分類的
+        編碼手冊；以及一個互動網站，讓訪客搜尋、篩選，並透過網絡圖、桑基圖和詞雲探索 367／141／42 的分佈。
+        主要發現是：大部分香港法律術語的譯法穩定，但約三分之一有兩個或以上的譯名，另有一小群變化極大，例如
+        <em>information</em>。總而言之，人工智能已發展成一個不使用（付費版本）就難以想像的領域。然而，AI 仍像一部
+        「智能答題機」，需要好的提示（prompt）才能觸發它真正的能力；否則，它就愚笨得像一部傳統計算機，甚至偶爾連
+        一加一也算錯。這個時代的人類擔當開發者、也就是指揮官的角色。至少在現階段，AI 不是來取代工作，而是來協助
+        我們。所以，無須害怕——主動帶領吧。
+      </p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">8. Reflection</h2>
+      <h2 data-lang="zh-Hant" hidden>8. 反思</h2>
+      <p data-lang="en">
+        Additionally, due to my limited legal knowledge, deciding the category troubled me a lot
+        and was done completely by AI; though I found it unsatisfactory, I could not raise a
+        better plan. But I did learn how to have continuous conversations with AI so that it could
+        develop and better the project step by step, though sometimes it would forget what we had
+        done and what should be kept, which was a real headache for me. If given another chance, I
+        would, first and foremost, have learnt legal English better back in college, so that I
+        could have done better when I decided how to define the categories. Though AI did help a
+        lot, I am still uncertain about the feasibility of such a category. To put it plainly,
+        what I learned is how to steer an AI through an iterative task and how to verify its
+        numbers; what stayed hardest was my own legal-terminology judgement; what I would do
+        differently is learn legal English earlier and pilot the categories even sooner; and what
+        AI could do was draft, classify, and visualise quickly, while what it could not do was
+        guarantee that its classifications were conceptually right.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        此外，由於我的法律知識有限，決定分類一直令我十分苦惱，最後完全交由 AI 完成；雖然我覺得結果並不理想，
+        卻提不出更好的方案。但我確實學會了如何與 AI 持續對話，讓它一步一步把項目發展得更好，雖然它有時會忘記
+        我們做過甚麼、甚麼應該保留，這真的令我頭痛。如果再有機會，我會首先在大學時把法律英語學得更好，這樣在
+        決定如何界定分類時就能做得更好。雖然 AI 幫了很大的忙，我對這種分類是否可行仍不完全確定。說得明白一點：
+        我學到的是如何引導 AI 完成一項反覆迭代的工作，以及如何核對它的數字；最困難的始終是我自己對法律術語的
+        判斷；我會做不同的是更早學好法律英語、更早試行分類；AI 能做的是快速起草、分類和視覺化，而它做不到的是
+        保證其分類在概念上是正確的。
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <span data-i18n="footer.label">Built with data from the Hong Kong Department of Justice English-Chinese Glossary of Legal Terms (open data). Source:</span>
+      <a href="https://www.glossary.doj.gov.hk" target="_blank" rel="noopener" data-i18n="footer.link">glossary.doj.gov.hk</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+  <script src="data/corpus.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/report-charts.js"></script>
+</body>
+</html>

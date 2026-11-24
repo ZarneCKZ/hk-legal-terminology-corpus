@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Use Declaration / AI 使用聲明</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <h1 class="site-title" data-lang="en">AI Use Declaration</h1>
+        <h1 class="site-title" data-lang="zh-Hant" hidden>AI 使用聲明</h1>
+        <p class="site-subtitle" data-lang="en">Which tools were used, and what was checked by hand</p>
+        <p class="site-subtitle" data-lang="zh-Hant" hidden>用了哪些工具、自己核對了什麼</p>
+      </div>
+      <div class="header-actions">
+        <button id="lang-toggle" class="lang-toggle" type="button">繁體中文</button>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html" class="nav-link" data-i18n="nav.explorer">Explorer</a>
+      <a href="report.html" class="nav-link" data-i18n="nav.report">Report</a>
+      <a href="codebook.html" class="nav-link" data-i18n="nav.codebook">Codebook</a>
+      <a href="ai-declaration.html" class="nav-link active" data-i18n="nav.ai">AI Use Declaration</a>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <section>
+      <h2 data-lang="en">1. Tools and models</h2>
+      <h2 data-lang="zh-Hant" hidden>1. 工具與模型</h2>
+      <p data-lang="en">
+        OpenAI Codex (a GPT-based coding agent, desktop app). It generated Python and Node
+        scripts to clean and sample the data, and wrote the website's HTML, CSS and JavaScript.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        OpenAI Codex（基於 GPT 的編程代理，桌面版）。它生成 Python 和 Node 腳本來清理和抽樣
+        數據，並編寫網站的 HTML、CSS 和 JavaScript。
+      </p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">2. What I asked AI to do</h2>
+      <h2 data-lang="zh-Hant" hidden>2. 我讓 AI 做什麼</h2>
+      <p data-lang="en">
+        Parse and clean the XML, remove duplicates, randomly sample 550 entries, compute the
+        number of distinct Chinese renderings per English term, generate the CSV / JSON / Excel
+        files, build the interactive website, and draft the codebook and report.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        解析並清理 XML、去重、隨機抽 550 條、計算每個英文詞的不同中文譯名數、生成 CSV /
+        JSON / Excel、搭建互動網站，以及起草 codebook 和報告。
+      </p>
+      <p data-lang="en">
+        I also asked it to translate the learning report into Traditional Chinese.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        我也請它把學習報告翻譯成繁體中文。
+      </p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">3. What I did and checked by hand</h2>
+      <h2 data-lang="zh-Hant" hidden>3. 我自己做和核對的部分</h2>
+      <p data-lang="en">
+        I chose the topic and the source, decided the classification scheme, and rewrote the
+        codebook definitions in my own words. I manually checked 50 randomly sampled entries
+        against the original source and found 0 errors. I also reviewed the website and charts
+        and asked for changes (chart layout, filters, replacing the heatmap with the word cloud,
+        and the cross-reference-note fix).
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        我選題、選來源、決定分類方式，並用自己的話重寫 codebook 定義。我隨機抽 50 條對回原文
+        人工核對，0 個錯誤。我也審查了網站和圖表，並提出修改（圖卡排布、篩選、把熱力圖換成
+        詞雲、交叉引用注記的修正）。
+      </p>
+      <p data-lang="en">
+        I reviewed and edited the Traditional Chinese translation of the report.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        我審閱並修訂了報告的繁體中文翻譯。
+      </p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">4. Example prompts that worked</h2>
+      <h2 data-lang="zh-Hant" hidden>4. 有效的 prompt 例子</h2>
+      <p data-lang="en">
+        “Fix the unescaped ampersands in the XML, remove duplicates, draw 550 entries with seed
+        2026, and classify each English term by its number of distinct Chinese renderings.”
+      </p>
+      <p data-lang="en">
+        “Replace the heatmap with a word cloud, and make all three visualizations click through to
+        search and put the search state in the URL.”
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        「修好 XML 裡未轉義的 &amp;，去重後用種子 2026 抽 550 條，再按每個英文詞的不同中文
+        譯名數分類。」
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        「把熱力圖換成詞雲，並讓三張圖都能點擊連到搜尋，把搜尋狀態寫進網址。」
+      </p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">5. Things AI got wrong, and how I noticed</h2>
+      <h2 data-lang="zh-Hant" hidden>5. AI 做錯的地方與我的發現</h2>
+      <p data-lang="en">
+        Three concrete cases: (1) the parser failed on the XML because unescaped
+        <code>&amp;</code> characters broke it, and I caught the error message and asked for the
+        ampersands to be fixed; (2) the first translation-strategy classification (literal /
+        functional equivalent / explanatory / other) agreed with only 14 of my 30 pilot labels,
+        so I replaced it with the mechanical rendering-count classification; (3) the first
+        heatmap was not meaningful for this research question, so after looking at it I asked for
+        the word cloud instead.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        三個具體例子：（1）解析器因為 XML 裡未轉義的 <code>&amp;</code> 而報錯，我從錯誤訊息
+        發現後請它修好；（2）第一版翻譯策略分類（直譯／慣用對等／解釋性／其他）只和我 30 條
+        試標對上 14 條，所以我改用機械的譯名數分類；（3）最早的熱力圖對本研究沒有意義，我看
+        過之後請它換成詞雲。
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <span data-i18n="footer.label">Built with data from the Hong Kong Department of Justice English-Chinese Glossary of Legal Terms (open data). Source:</span>
+      <a href="https://www.glossary.doj.gov.hk" target="_blank" rel="noopener" data-i18n="footer.link">glossary.doj.gov.hk</a>
+    </p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+</body>
+</html>

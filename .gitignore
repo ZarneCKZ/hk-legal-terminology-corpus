@@ -1,0 +1,13 @@
+# Non-site project files (do not publish)
+*.zip
+*.docx
+*.pdf
+*.xlsx
+*.xml
+/site/
+/scripts/
+/build/
+/preview/
+/outputs/
+/start-server.vbs
+/start-server.bat

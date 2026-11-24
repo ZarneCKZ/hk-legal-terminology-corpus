@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codebook / 編碼手冊</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <h1 class="site-title" data-lang="en">Codebook</h1>
+        <h1 class="site-title" data-lang="zh-Hant" hidden>編碼手冊</h1>
+        <p class="site-subtitle" data-lang="en">Classification rules for rendering multiplicity</p>
+        <p class="site-subtitle" data-lang="zh-Hant" hidden>譯名多樣性的分類規則</p>
+      </div>
+      <div class="header-actions">
+        <button id="lang-toggle" class="lang-toggle" type="button">繁體中文</button>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html" class="nav-link" data-i18n="nav.explorer">Explorer</a>
+      <a href="report.html" class="nav-link" data-i18n="nav.report">Report</a>
+      <a href="codebook.html" class="nav-link active" data-i18n="nav.codebook">Codebook</a>
+      <a href="ai-declaration.html" class="nav-link" data-i18n="nav.ai">AI Use Declaration</a>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <section>
+      <h2 data-lang="en">How to read this codebook</h2>
+      <h2 data-lang="zh-Hant" hidden>使用說明</h2>
+      <p data-lang="en">
+        Each entry is one English legal term and its Chinese rendering. The category states how
+        many distinct Chinese renderings that English term has across the full official glossary
+        (73,443 records).
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        每一條是一個英文法律術語及其中文譯名。分類表示該英文術語在完整官方詞庫
+        （73,443 條）中一共有多少種不同中文譯名。
+      </p>
+      <p data-lang="en">
+        A rendering with a cross-reference note such as ※比較 is stripped before counting, so only
+        genuinely different renderings are counted; for example, 法律行動 ※比較 suit and 法律行動
+        count as the same.
+      </p>
+      <p data-lang="zh-Hant" hidden>
+        帶「※比較」之類交叉引用注記的譯名，計數前會先去掉注記，只算真正不同的譯文；
+        例如「法律行動 ※比較 suit」和「法律行動」算同一種。
+      </p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">1. one_to_one — One-to-one</h2>
+      <h2 data-lang="zh-Hant" hidden>1. 一對一（One-to-one）</h2>
+      <p data-lang="en"><strong>Definition:</strong> The same English legal term has exactly one Chinese rendering across the whole official glossary.</p>
+      <p data-lang="zh-Hant" hidden><strong>定義：</strong>同一個英文法律術語，在整個官方詞庫裡只有一種中文說法。</p>
+      <p data-lang="en"><strong>Theory:</strong> Šarčević (1997), <em>New Approach to Legal Translation</em>; Cao (2007), <em>Translating Law</em>.</p>
+      <p data-lang="zh-Hant" hidden><strong>理論來源：</strong>Šarčević（1997）《New Approach to Legal Translation》；Cao（2007）《Translating Law》。</p>
+      <p data-lang="en"><strong>Decision rule:</strong> Count the distinct Chinese renderings for this English term across all 73,443 records; if the count is 1, it is one_to_one.</p>
+      <p data-lang="zh-Hant" hidden><strong>判定規則：</strong>數一下這個英文詞在全部 73,443 條官方記錄裡出現過幾種不同的中文譯名；只有 1 種，就歸一對一。</p>
+      <p data-lang="en"><strong>Positive example:</strong> <em>abandonment of claim</em> → 放棄申索 (1 rendering).</p>
+      <p data-lang="zh-Hant" hidden><strong>正例：</strong><em>abandonment of claim</em> → 放棄申索（1 種）</p>
+      <p data-lang="en"><strong>Negative example:</strong> <em>at par</em> → 3 renderings, so it is not one_to_one.</p>
+      <p data-lang="zh-Hant" hidden><strong>反例：</strong><em>at par</em> → 有 3 種譯法，不屬此類。</p>
+      <p data-lang="en"><strong>Boundary case:</strong> If the only rendering carries a trailing ※比較 note, the note is stripped first; if the cleaned set still has exactly 1 rendering, it stays one_to_one.</p>
+      <p data-lang="zh-Hant" hidden><strong>邊界案例：</strong>如果一條譯文後面帶了「※比較」之類的交叉引用注記，計數前先把注記去掉，只算真正不同的譯文；去掉後仍然只有 1 種的，才歸一對一。</p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">2. one_to_many — One-to-two-or-three (2–3)</h2>
+      <h2 data-lang="zh-Hant" hidden>2. 一對二或三（One-to-many, 2–3）</h2>
+      <p data-lang="en"><strong>Definition:</strong> The same English term is rendered in 2 or 3 different ways in the official glossary.</p>
+      <p data-lang="zh-Hant" hidden><strong>定義：</strong>同一個英文詞，官方給了 2 到 3 種不同的中文譯法。</p>
+      <p data-lang="en"><strong>Theory:</strong> Šarčević (1997) on terminological incongruency; Cabré (1999), <em>Terminology</em>.</p>
+      <p data-lang="zh-Hant" hidden><strong>理論來源：</strong>Šarčević（1997）論術語不一致；Cabré（1999）《Terminology》。</p>
+      <p data-lang="en"><strong>Decision rule:</strong> Count the distinct Chinese renderings for this English term across all 73,443 records; if the count is 2 or 3, it is one_to_many.</p>
+      <p data-lang="zh-Hant" hidden><strong>判定規則：</strong>數一下這個英文詞在全部 73,443 條官方記錄裡的不同中文譯名數目；是 2 或 3 種，就歸一對二或三。</p>
+      <p data-lang="en"><strong>Positive example:</strong> <em>at par</em> → 以票面值 / 按面值 / 照票面值 (3 renderings); <em>action</em> → 行動 / 法律行動 / 訴訟 (3 renderings after the ※比較 note is merged).</p>
+      <p data-lang="zh-Hant" hidden><strong>正例：</strong><em>at par</em> → 以票面值 / 按面值 / 照票面值（共 3 種）；<em>action</em> → 行動 / 法律行動 / 訴訟（去掉「※比較」注記後共 3 種）</p>
+      <p data-lang="en"><strong>Negative example:</strong> <em>abandonment of claim</em> → 1 rendering, so it is not one_to_many.</p>
+      <p data-lang="zh-Hant" hidden><strong>反例：</strong><em>abandonment of claim</em> → 只有 1 種，不屬此類。</p>
+      <p data-lang="en"><strong>Boundary case:</strong> <em>action</em> has a rendering 法律行動 ※比較 suit that looks like a 4th rendering but is only a cross-reference note; after stripping it the count is 3, so the term belongs here rather than in polysemous.</p>
+      <p data-lang="zh-Hant" hidden><strong>邊界案例：</strong>像 <em>action</em> 這種，原文有一條「法律行動 ※比較 suit」，乍看像第 4 種譯法，其實只是同一譯文的交叉引用注記；去掉注記後是 3 種，所以歸一對二或三，而不是一對四及以上。</p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">3. polysemous — One-to-four-or-more (4+)</h2>
+      <h2 data-lang="zh-Hant" hidden>3. 一對四及以上（Highly polysemous, 4+）</h2>
+      <p data-lang="en"><strong>Definition:</strong> The same English term is rendered in 4 or more different ways — the clearest case of disagreement.</p>
+      <p data-lang="zh-Hant" hidden><strong>定義：</strong>同一個英文詞，官方有 4 種甚至更多中文譯法，分歧最明顯。</p>
+      <p data-lang="en"><strong>Theory:</strong> Cao (2007) on the indeterminacy of legal translation equivalents; Cabré (1999) on polysemy.</p>
+      <p data-lang="zh-Hant" hidden><strong>理論來源：</strong>Cao（2007）論法律翻譯對應詞的不確定性；Cabré（1999）論多義。</p>
+      <p data-lang="en"><strong>Decision rule:</strong> Count the distinct Chinese renderings for this English term across all 73,443 records; if the count is 4 or more, it is polysemous.</p>
+      <p data-lang="zh-Hant" hidden><strong>判定規則：</strong>數一下這個英文詞在全部 73,443 條官方記錄裡的不同中文譯名數目；是 4 種或以上，就歸一對四及以上。</p>
+      <p data-lang="en"><strong>Positive example:</strong> <em>information</em> → 信息 / 告發 / 情報 / 消息 / 資料 / 資訊 (6 renderings).</p>
+      <p data-lang="zh-Hant" hidden><strong>正例：</strong><em>information</em> → 信息 / 告發 / 情報 / 消息 / 資料 / 資訊（共 6 種）</p>
+      <p data-lang="en"><strong>Negative example:</strong> <em>at par</em> → 3 renderings, so one_to_many; <em>action</em> → 3 renderings after the cross-reference note is merged, so one_to_many.</p>
+      <p data-lang="zh-Hant" hidden><strong>反例：</strong><em>at par</em> → 只有 3 種，屬一對二或三；<em>action</em> → 去掉交叉引用注記後只有 3 種，也屬一對二或三。</p>
+      <p data-lang="en"><strong>Boundary case:</strong> A term with 4 renderings where one is a ※比較 cross-reference note; after stripping it the count is 3, so the term moves to one_to_many. This is how <em>action</em> and <em>statute</em> are handled.</p>
+      <p data-lang="zh-Hant" hidden><strong>邊界案例：</strong>如果一個詞有 4 種譯法，但其中一種是帶「※比較」的交叉引用注記，去掉後只剩 3 種，就改歸一對二或三；這正是 <em>action</em> 和 <em>statute</em> 的處理方式。</p>
+    </section>
+
+    <section>
+      <h2 data-lang="en">Revision log</h2>
+      <h2 data-lang="zh-Hant" hidden>修訂日誌</h2>
+      <p data-lang="en"><strong>v0.1 (draft) — translation strategy, 4 categories:</strong> literal, functional equivalent, explanatory, other / mixed. Theory: Vinay &amp; Darbelnet, Cao, Šarčević.</p>
+      <p data-lang="en"><strong>Pilot:</strong> the 4 categories were applied to the first 30 sampled entries.</p>
+      <p data-lang="en"><strong>Problem found:</strong> the strategy categories could not be applied consistently. An automated first pass agreed with only 14 of the 30 manual pilot labels, mainly because many established Chinese legal terms are themselves calques (e.g. <em>patent agent</em> → 專利代理人), which blurs the line between literal and functional equivalent.</p>
+      <p data-lang="en"><strong>v1.0 — rendering multiplicity, 3 categories:</strong> one-to-one (1 rendering), one-to-two-or-three (2–3), one-to-four-or-more (4+). Decision rule: count the distinct Chinese renderings for each English term across the full official glossary (73,443 records). Reason: the rule is mechanical, fully reproducible and consistent, and it directly answers the research question.</p>
+      <p data-lang="en"><strong>Result:</strong> all 550 entries classified — one-to-one 367, one-to-two-or-three 139, one-to-four-or-more 44.</p>
+      <p data-lang="en"><strong>v1.1 (current) — cross-reference note fix:</strong> a rendering with a trailing <em>※比較</em> annotation is no longer counted as a separate rendering; the annotation is stripped before counting. This moved <em>action</em> and <em>statute</em> from one-to-four-or-more to one-to-two-or-three (4 → 3 distinct renderings). Result: one-to-one 367, one-to-two-or-three 141, one-to-four-or-more 42.</p>
+
+      <p data-lang="zh-Hant" hidden><strong>v0.1（初稿）— 翻譯策略 4 類：</strong>直譯、慣用對等、解釋性、其他/混合。理論來源：Vinay &amp; Darbelnet、Cao、Šarčević。</p>
+      <p data-lang="zh-Hant" hidden><strong>試標：</strong>先把這 4 類用在抽樣的前 30 條上。</p>
+      <p data-lang="zh-Hant" hidden><strong>發現問題：</strong>這 4 類難以一致地套用。自動初判只和人工標記的 30 條對上 14 條，主要因為很多中文法律慣用詞本身就是仿造詞（例如 <em>patent agent</em> → 專利代理人），使「直譯」和「慣用對等」的界線模糊。</p>
+      <p data-lang="zh-Hant" hidden><strong>v1.0 — 譯名多樣性 3 類：</strong>一對一（1 種）、一對二或三（2–3 種）、一對四及以上（4 種或以上）。判定規則：統計每個英文詞在完整官方詞庫（73,443 條）中的不同中文譯法數目。改動原因：規則機械、可完全重現、分類一致，而且直接回答研究問題。</p>
+      <p data-lang="zh-Hant" hidden><strong>結果：</strong>550 條全部完成分類——一對一 367、一對二或三 139、一對四及以上 44。</p>
+      <p data-lang="zh-Hant" hidden><strong>v1.1（現行）— 交叉引用注記修正：</strong>帶「※比較」注記的譯名不再單獨算作一種譯法，計數前先去掉注記。這使 <em>action</em> 和 <em>statute</em> 由一對四及以上改為一對二或三（4 → 3 種）。結果：一對一 367、一對二或三 141、一對四及以上 42。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <span data-i18n="footer.label">Built with data from the Hong Kong Department of Justice English-Chinese Glossary of Legal Terms (open data). Source:</span>
+      <a href="https://www.glossary.doj.gov.hk" target="_blank" rel="noopener" data-i18n="footer.link">glossary.doj.gov.hk</a>
+    </p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+</body>
+</html>
